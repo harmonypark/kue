@@ -274,7 +274,7 @@ kue.app.set('title', 'My Application');
 
   Along with the UI Kue also exposes a JSON API, which is utilized by the UI.
 
-### GET /job/search?q=
+### GET /jobs/search?q=
 
   Query jobs, for example "GET /job/search?q=avi video":
 
@@ -290,7 +290,7 @@ kue.app.set('title', 'My Application');
 {"inactiveCount":4,"completeCount":69,"activeCount":2,"failedCount":0,"workTime":20892}
 ```
 
-### GET /job/:id
+### GET /jobs/:id
 
   Get a job by `:id`:
 
@@ -298,7 +298,7 @@ kue.app.set('title', 'My Application');
 {"id":"3","type":"email","data":{"title":"welcome email for tj","to":"tj@learnboost.com","template":"welcome-email"},"priority":-10,"progress":"100","state":"complete","attempts":null,"created_at":"1309973155248","updated_at":"1309973155248","duration":"15002"}
 ```
 
-### GET /job/:id/log
+### GET /jobs/:id/log
 
   Get job `:id`'s log:
   
@@ -328,14 +328,14 @@ kue.app.set('title', 'My Application');
 
   Same as above, however restricted to `:type` and `:state`.
 
-### DELETE /job/:id
+### DELETE /jobs/:id
 
   Delete job `:id`:
   
     $ curl -X DELETE http://local:3000/job/2
     {"message":"job 2 removed"}
 
-### POST /job
+### POST /jobs
 
   Create a job:
 
